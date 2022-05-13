@@ -1,12 +1,15 @@
 import math
+from tkinter import S
+
+from numpy import mat
 
 ####--####--####--####--####--##
 # #Exercise 8
-def f(x):
-   return math.e**(5*x) - 2
+#def f(x):
+#   return math.e**(5*x) - 2
 
-def df(x):
-   return 5*math.e**(5*x)
+#def df(x):
+#   return 5*math.e**(5*x)
 
 # x0 = 0.57934
 # numIteracao = 10
@@ -112,8 +115,31 @@ def df(x):
 #def df(x):
 #  return 2*x - 4 - 1/x
 
-x0=-1.16779128
-numIteracao = 700
+#def f(x):
+    
+#    g = 9.81
+#    c = 18.22
+#    v = 39.61
+#    t = 8.2
+
+#    return ((g*x)/c) * (1 - math.e**(-(c/x)*t)) - v
+
+#def df(x):
+#    return 0.538419 * (1 - math.e**(-(149.404)/x)) - (80.442 * (math.e**(-(149.404)/x))/x)
+
+def f(x):
+  g=9.81
+  v=11.07  
+  t=5.72
+  l=7.35
+  return v - math.sqrt(2*g*x) * math.tanh(((math.sqrt(2*g*x))/(2*l))*t)
+
+def df(x):
+  return - (3* math.sqrt(109)* math.tanh((143*math.sqrt(2)*math.sqrt(109)*math.sqrt(x))/(1225)))/(5*2**(3/2)*math.sqrt(x)) - (46761 * (1/(math.cosh((143*math.sqrt(2)*math.sqrt(109)*math.sqrt(x))/(1225)))))/12250
+
+
+x0= 1.0
+numIteracao = 5
 
 ###--####--####--####--####--##
 

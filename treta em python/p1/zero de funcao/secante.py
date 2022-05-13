@@ -70,11 +70,17 @@ import math
 # PROVA - 3
 
 def f(x):
-  return x**2 - 5
+    
+    g = 9.81
+    c = 18.22
+    v = 39.61
+    t = 8.2
 
+    return ((g*x)/c) * (1 - math.e**(-(c/x)*t)) - v
 
-x0=-2.9345
-x1=-1.5523
+x0= 26.95
+x1= 38.94
+numIteracao = 5
 
 ###--####--####--####--####--##
 

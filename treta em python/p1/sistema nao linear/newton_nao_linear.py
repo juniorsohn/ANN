@@ -19,7 +19,7 @@ import math
 
 ###########################
 # Exercício 47
-# def f1(x,y):
+# def f1(x,y):  
 #   return x**2 + (2*y**2) - 3
 
 # def f2(x,y):
@@ -59,23 +59,24 @@ import math
 ###########################
 ###########################
 # Exercício 49
-# def f1(x,y):
-#   return x**2 + y**2 - 5
 
-# def f2(x,y):
-#   return x**2 + x*y**3 - 3
+def f1(x,y):
+   return x**2 + y**2 - 5
 
-# def f1x(x,y):
-#   return 2*x
+def f2(x,y):
+   return x**2 + x*y**3 - 3
 
-# def f2x(x,y):
-#   return 2*x + y**3
+def f1x(x,y):
+   return 2*x
 
-# def f1y(x,y):
-#   return 2*y
+def f2x(x,y):
+   return 2*x + y**3
 
-# def f2y(x,y):
-#   return 3*x*y**2
+def f1y(x,y):
+   return 2*y
+
+def f2y(x,y):
+   return 3*x*y**2
 ###########################
 ###########################
 # Exercício 50
@@ -100,23 +101,25 @@ import math
 ###########################
 # PROVA - 11
 
-def f1(x,y):
-  return (4*x**2) + y**2 - 5
+#def f1(x,y):
+#  return (4*x**2) + y**2 - 5
 
-def f2(x,y):
-  return x**2 + y**3 - 4
+#def f2(x,y):
+#  return x**2 + y**3 - 4
 
-def f1x(x,y):
-  return 8*x
+#def f1x(x,y):
+#  return 8*x
 
-def f2x(x,y):
-  return 2*x
+#def f2x(x,y):
+#  return 2*x
 
-def f1y(x,y):
-  return 2*y
+#def f1y(x,y):
+#  return 2*y
 
-def f2y(x,y):
-  return 3*y**2
+#def f2y(x,y):
+#  return 3*y**2
+
+
 ################################
 ################################
 ################################
@@ -129,8 +132,8 @@ def eq1(x,y):
 def eq2(x,y):
   return y - (1 / det(x,y)) * (-f2x(x,y) * f1(x,y) + f1x(x,y) * f2(x,y))
 
-x0 = 0.7324
-y0 = 1.3758
+x0 = -0.4809
+y0 = -2.4515
 n  = 4
 
 if __name__ == "__main__":

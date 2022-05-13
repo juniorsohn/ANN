@@ -1,7 +1,7 @@
 import math
 
 ####--####--####--####--####--##
-#Exercise 1
+# Exercise 1
 # def f(x):
 #   return x**2 - 3
 
@@ -9,42 +9,42 @@ import math
 # b = -0.74369
 
 ####--####--####--####--####--##
-#Exercise 2
-#def f(x):
+# Exercise 2
+# def f(x):
 #   return x**2 - 4*x +2 - math.log(x)
 # a = 0.26115
 # b = 1.83549
 
 ####--####--####--####--####--##
-#Exercise 3
+# Exercise 3
 # def f(x):
 #   return math.exp(x) - 2*x**2 +x -1.5
 # a = 1.64464
 # b = 2.60854
 
 ####--####--####--####--####--##
-#Exercise 4
-#def f(x):
+# Exercise 4
+# def f(x):
 #   return x**2 - 7
 # a = -3.2867
 # b = -2.02933
 
 ####--####--####--####--####--##
-#Exercise 5
-#def f(x):
+# Exercise 5
+# def f(x):
 #   return x**2 - 5
 # a = -2.78116
 # b = -1.63452
 
 ####--####--####--####--####--##
-#Exercise 6
-#def f(x):
+# Exercise 6
+# def f(x):
 #   return x**4 -2*x**3 -3*x**2 +3*x + 2
 # a = -0.96755
 # b = 0.27804
 
 ####--####--####--####--####--##
-#Exercise 7
+# Exercise 7
 # def f(x):
 #   return x**3 - 7*x**2 + 14*x - 7
 # a = 0.32818
@@ -55,11 +55,11 @@ import math
 # Exercise 29
 
 # def f(x):
-   # v=32.3
-   # g=9.81
-   # c=24.08
-   # t=7.63
-   # return math.log(g)-math.log(c)-math.log(v) + math.log(x) + math.log(1-math.e**(-(c/x)*t))
+# v=32.3
+# g=9.81
+# c=24.08
+# t=7.63
+# return math.log(g)-math.log(c)-math.log(v) + math.log(x) + math.log(1-math.e**(-(c/x)*t))
 
 # a=39.09
 # b=205.18
@@ -70,11 +70,11 @@ import math
 # Exercise 30
 
 # def f(x):
-   # g=9.81
-   # m=70.73
-   # v=26.44
-   # t=7.18
-   # return math.log(g)-math.log(x)-math.log(v) + math.log(m) + math.log(1-math.e**(-(x/m)*t))
+# g=9.81
+# m=70.73
+# v=26.44
+# t=7.18
+# return math.log(g)-math.log(x)-math.log(v) + math.log(m) + math.log(1-math.e**(-(x/m)*t))
 
 # a=1
 # b=100
@@ -84,28 +84,41 @@ import math
 ###--####--####--####--####--##
 # Exercise 31
 
-# def f(x):
-   # g=9.81
-   # v=9.35
-   # t=4.71
-   # l=3.37
-   # return (math.sqrt(2*g*x)*math.tanh((math.sqrt(2*g*x)/2*l)*t)/v)-1
+#def f(x):
 
-# a=0
-# b=6
-# numIteracao = 15
-# err=0
+#  g=9.81
+#  v=11.07  
+#  t=5.72
+#  l=7.35
+#  return v - math.sqrt(2*g*x) * math.tanh(((math.sqrt(2*g*x))/(2*l))*t)
+
+def A(y):
+  return (6.47*y + ((y*y)/2))*(6.47*y + ((y*y)/2))*(6.47*y + ((y*y)/2))
+
+def B(y):
+  return (6.47 + y)
+
+def f(y):
+  g = 9.81
+  Q = 171.94
+  return (1 - ((Q**2)/g * A(y)) * B(y))
+
+a=0.3
+b=9.45
+numIteracao = 12
+err=0
+
 ###--####--####--####--####--##
 ###--####--####--####--####--##
 # Exercise 32
 
 # def f(x):
-   # q=158.06
-   # g=9.81
-   # b=1.56+x
-   # ac=1.56*x+x**2/2
-   # return 1 - ((q**2/g*ac**3)*b)
-   # return -(q**2/(g*ac**3)*b) + 1
+# q=158.06
+# g=9.81
+# b=1.56+x
+# ac=1.56*x+x**2/2
+# return 1 - ((q**2/g*ac**3)*b)
+# return -(q**2/(g*ac**3)*b) + 1
 # a=0.1
 # b=8
 # numIteracao = 13
@@ -115,11 +128,11 @@ import math
 # Exercise 33
 
 # def f(x):
-   # r=7.74
-   # v=480.18
-   # p1=math.pi*x**2
-   # p2=(3*r-x)/3
-   # return ((math.pi*x**2*((3*r-x)/3))/v) - 1
+# r=7.74
+# v=480.18
+# p1=math.pi*x**2
+# p2=(3*r-x)/3
+# return ((math.pi*x**2*((3*r-x)/3))/v) - 1
 # a=0
 # b=15.48
 # numIteracao = 11
@@ -129,13 +142,13 @@ import math
 # Exercise 34
 
 # def f(x):
-   # r=3.5
-   # ps=464.59
-   # pw=1000
-   # vs=(4*math.pi*r**3)/3
-   # v=(math.pi*x**2/3)*(3*r-x)
-   # # print("vs=={}||=={}\n".format(vs,v))
-   # return ((pw*(vs-v))/(ps*vs)) - 1
+# r=3.5
+# ps=464.59
+# pw=1000
+# vs=(4*math.pi*r**3)/3
+# v=(math.pi*x**2/3)*(3*r-x)
+# # print("vs=={}||=={}\n".format(vs,v))
+# return ((pw*(vs-v))/(ps*vs)) - 1
 
 # r=3.5
 # a=0
@@ -277,29 +290,47 @@ import math
 # err=0
 ###--####--####--####--####--##
 
+
+#def f(x):
+    
+#    g = 9.81
+#    c = 18.22
+#    v = 39.61
+#    t = 8.2
+
+#    return ((g*x)/c) * (1 - math.e**(-(c/x)*t)) - v
+
+#a = 26.07
+#b = 193.08
+#numIteracao = 12
+#err = 0
+
+
 #   ZERO DE FUNCAO
 #           METODO DA BISSECAO
 # Entrada: estimativa inicial (a), estimativa inicial 2 (b) funcao (f), precisão (err) e numero de iteracoes (numIteracao)
-def bissecao(a,b,f,err,numIteracao):
-  print("f(a) * f(b) = {0}\n" .format(f(a)*f(b)) )
-  if f(a) * f(b) < 0:
-    midPoint = (a+b)/2
-    for x in range(numIteracao):
-      if (math.fabs(f(midPoint)) > err):
+def bissecao(a, b, f, err, numIteracao):
+    print("f(a) * f(b) = {0}\n" .format(f(a)*f(b)))
+    if f(a) * f(b) < 0:
         midPoint = (a+b)/2
-        if f(midPoint) == 0 or (math.fabs(f(midPoint)) < err):
-          print("A raiz e: {0}\n\n".format(midPoint))
-        else:
-          if f(a) * f(midPoint) < 0:
-            b = midPoint
-          else:
-            a = midPoint
-      else:
-        print("A raiz e: {0}\n\n".format(midPoint))
-        break
-      print("x_{0} = {1} \t f->{2}".format(x+1, midPoint, (math.fabs(f(midPoint))) ))
-  else:
-    print("Nao ha raiz neste intervalo!")
+        for x in range(numIteracao):
+            if (math.fabs(f(midPoint)) > err):
+                midPoint = (a+b)/2
+                if f(midPoint) == 0 or (math.fabs(f(midPoint)) < err):
+                    print("A raiz e: {0}\n\n".format(midPoint))
+                else:
+                    if f(a) * f(midPoint) < 0:
+                        b = midPoint
+                    else:
+                        a = midPoint
+            else:
+                print("A raiz e: {0}\n\n".format(midPoint))
+                break
+            print("x_{0} = {1} \t f->{2}".format(x+1,
+                  midPoint, (math.fabs(f(midPoint)))))
+    else:
+        print("Nao ha raiz neste intervalo!")
+
 
 if __name__ == "__main__":
-  bissecao(a,b,f,err,numIteracao)
+    bissecao(a, b, f, err, numIteracao)

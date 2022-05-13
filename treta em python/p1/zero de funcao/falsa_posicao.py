@@ -66,11 +66,45 @@ import math
 #def f(x):
 #  return 2*(x+1)*(x-0.5)*(x-1)
 
-def f(x):
-  return x*math.cos(x) - 3*x**2 + 4*x -1
+# def f(x):
+#  return x*math.cos(x) - 3*x**2 + 4*x -1
 
-a=0.6716
-b=1.4181
+#a=0.6716
+#b=1.4181
+
+#def f(x):
+    
+#    g = 9.81
+#    c = 18.22
+#    v = 39.61
+#    t = 8.2
+
+#    return ((g*x)/c) * (1 - math.e**(-(c/x)*t)) - v
+
+# QUESTÃO ESCROTA DA ÁGUA
+
+#def f(x):
+
+# g=9.81
+# v=11.07  
+# t=5.72
+# l=7.35
+# return v - math.sqrt(2*g*x) * math.tanh(((math.sqrt(2*g*x))/(2*l))*t)
+
+def A(y):
+  return 6.95*y + ((y**2)/2)
+
+def B(y):
+  return 6.95 + y
+
+def f(y):
+  g = 9.81
+  Q = 171.52
+  return (1 - ((Q**2)/g*(A(y)**3)) * B(y))
+
+a = 0.23
+b = 8.94
+numIteracao = 11
 
 
 ###--####--####--####--####--##
